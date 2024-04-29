@@ -1,4 +1,4 @@
-import daoArtifactJson from "../artifacts/src/Test.sol/Test.json";
+import daoArtifactJson from "../build/artifacts-zk/src/Test.sol/Test.json";
 import { ArtifactData, DeployFunction } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
