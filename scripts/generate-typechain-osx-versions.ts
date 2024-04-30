@@ -24,7 +24,7 @@ async function generateTypechain(src: string, dest: string): Promise<void> {
 
 for (let i = 0; i < OSX_VERSION_ALIASES.length; i++) {
   generateTypechain(
-    `./artifacts-zk/${OSX_VERSION_ALIASES[i]}`,
+    `./build/artifacts-zk/${OSX_VERSION_ALIASES[i]}`,
     `./typechain/${OSX_VERSION_ALIASES[i]}`
   );
 }

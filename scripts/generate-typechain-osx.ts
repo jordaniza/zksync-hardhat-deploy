@@ -9,7 +9,7 @@ dotenv.config();
 const execPromise = util.promisify(exec);
 
 async function generateTypechain(): Promise<void> {
-  const artifactsDir = "./artifacts";
+  const artifactsDir = "./build/artifacts-zk";
   const excludedDirs = new Set([path.join(artifactsDir, "build-info")]);
 
   for (let i = 0; i < OSX_VERSION_ALIASES.length; i++) {
