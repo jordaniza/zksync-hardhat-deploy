@@ -1,8 +1,6 @@
 import * as dotenv from "dotenv";
 
-
-
-import {  HardhatUserConfig } from "hardhat/config";
+import { HardhatUserConfig } from "hardhat/config";
 
 // import "hardhat-deploy";
 
@@ -10,13 +8,14 @@ import "@matterlabs/hardhat-zksync-solc";
 import "@matterlabs/hardhat-zksync-deploy";
 import "@matterlabs/hardhat-zksync-node";
 // import '@nomicfoundation/hardhat-chai-matchers';
-import "@nomicfoundation/hardhat-chai-matchers"
+import "@nomicfoundation/hardhat-chai-matchers";
+
 dotenv.config();
 
 const config: HardhatUserConfig = {
   zksolc: {
     version: "1.4.0", // Uses latest available in https://github.com/matter-labs/zksolc-bin/
-    compilerSource: 'binary',
+    compilerSource: "binary",
     settings: {},
   },
   solidity: {
@@ -42,7 +41,7 @@ const config: HardhatUserConfig = {
       gasPrice: 80000000000,
       allowUnlimitedContractSize: true,
       // deploy: ["./deploy"],
-      zksync: true
+      zksync: true,
     },
     zkSyncLocal: {
       url: "http://127.0.0.1:8011",
@@ -50,7 +49,7 @@ const config: HardhatUserConfig = {
       zksync: true,
       accounts: [
         // This is the rich account that already has lots of funds on the chain of port 8545
-        '0x3d3cbc973389cb26f657686445bcc75662b415b656078503592ac8c1abb8810e',
+        "0x3d3cbc973389cb26f657686445bcc75662b415b656078503592ac8c1abb8810e",
         // '0xac1e735be8536c6534bb4f17f06f6afc73b2b5ba84ac2cfb12f7461b20c0bbe3'
       ],
     },
